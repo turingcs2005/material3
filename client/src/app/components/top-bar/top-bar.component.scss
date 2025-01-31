@@ -1,0 +1,28 @@
+@use '@angular/material' as mat;
+
+mat-toolbar {
+    @include mat.elevation(8);
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-icon {
+    cursor: pointer;
+}
+
+
+:host {
+  @include mat.toolbar-overrides((
+    container-background-color: var(--mat-sys-primary),
+    container-text-color: var(--mat-sys-surface),
+  ));
+}
+
+.bright {
+    @include mat.toolbar-overrides((
+        container-background-color: navy,
+        container-text-color: gold,
+    )); 
+}
+
+  
